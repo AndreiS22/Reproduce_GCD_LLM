@@ -1,0 +1,43 @@
+Running SLURM prolog script on indigo58.cluster.local
+===============================================================================
+Job started on Fri Mar  7 17:42:12 GMT 2025
+Job ID          : 7150133
+Job name        : launch.sh
+WorkDir         : /mainfs/home/as1g21/GCD
+Command         : /mainfs/home/as1g21/GCD/launch.sh
+Partition       : gpu
+Num hosts       : 1
+Num cores       : 32
+Num of tasks    : 1
+Hosts allocated : indigo58
+Job Output Follows ...
+===============================================================================
+
+EnvironmentNameNotFound: Could not find conda environment: GPU-env
+You can list all discoverable environments with `conda info --envs`.
+
+
+Traceback (most recent call last):
+  File "/mainfs/home/as1g21/GCD/train.py", line 11, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+==============================================================================
+Running epilogue script on indigo58.
+
+Submit time  : 2025-03-07T17:16:20
+Start time   : 2025-03-07T17:42:11
+End time     : 2025-03-07T17:42:16
+Elapsed time : 00:00:05 (Timelimit=1-00:00:00)
+
+Job ID: 7150133
+Cluster: i5
+User/Group: as1g21/fp
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 00:00:02
+CPU Efficiency: 1.25% of 00:02:40 core-walltime
+Job Wall-clock time: 00:00:05
+Memory Utilized: 2.53 MB
+Memory Efficiency: 0.00% of 16.00 B
+

@@ -1,0 +1,79 @@
+Running SLURM prolog script on indigo54.cluster.local
+===============================================================================
+Job started on Sat Mar  8 01:18:49 GMT 2025
+Job ID          : 7150236
+Job name        : GCD_train.sh
+WorkDir         : /mainfs/home/as1g21/GCD
+Command         : /mainfs/home/as1g21/GCD/GCD_train.sh
+Partition       : gpu
+Num hosts       : 1
+Num cores       : 32
+Num of tasks    : 1
+Hosts allocated : indigo54
+Job Output Follows ...
+===============================================================================
+usage: train.py [-h] [--dump_path DUMP_PATH] [--exp_name EXP_NAME]
+                [--save_periodic SAVE_PERIODIC] [--exp_id EXP_ID]
+                [--fp16 FP16] [--amp AMP] [--enc_emb_dim ENC_EMB_DIM]
+                [--dec_emb_dim DEC_EMB_DIM] [--n_enc_layers N_ENC_LAYERS]
+                [--n_dec_layers N_DEC_LAYERS] [--n_enc_heads N_ENC_HEADS]
+                [--n_dec_heads N_DEC_HEADS]
+                [--n_enc_hidden_layers N_ENC_HIDDEN_LAYERS]
+                [--n_dec_hidden_layers N_DEC_HIDDEN_LAYERS]
+                [--xav_init XAV_INIT] [--gelu_activation GELU_ACTIVATION]
+                [--norm_attention NORM_ATTENTION] [--dropout DROPOUT]
+                [--attention_dropout ATTENTION_DROPOUT]
+                [--share_inout_emb SHARE_INOUT_EMB]
+                [--sinusoidal_embeddings SINUSOIDAL_EMBEDDINGS] [--lstm LSTM]
+                [--GRU GRU] [--lstm_hidden_dim LSTM_HIDDEN_DIM]
+                [--env_base_seed ENV_BASE_SEED] [--max_len MAX_LEN]
+                [--max_output_len MAX_OUTPUT_LEN] [--batch_size BATCH_SIZE]
+                [--eval_size EVAL_SIZE] [--batch_size_eval BATCH_SIZE_EVAL]
+                [--optimizer OPTIMIZER] [--clip_grad_norm CLIP_GRAD_NORM]
+                [--epoch_size EPOCH_SIZE] [--max_epoch MAX_EPOCH]
+                [--stopping_criterion STOPPING_CRITERION]
+                [--validation_metrics VALIDATION_METRICS]
+                [--accumulate_gradients ACCUMULATE_GRADIENTS]
+                [--num_workers NUM_WORKERS] [--export_data EXPORT_DATA]
+                [--reload_data RELOAD_DATA] [--reload_size RELOAD_SIZE]
+                [--batch_load BATCH_LOAD] [--env_name ENV_NAME]
+                [--maxint MAXINT] [--benford BENFORD]
+                [--train_uniform_gcd TRAIN_UNIFORM_GCD]
+                [--train_inverse_dist TRAIN_INVERSE_DIST]
+                [--train_sqrt_dist TRAIN_SQRT_DIST]
+                [--train_32_dist TRAIN_32_DIST] [--max_inverse MAX_INVERSE]
+                [--max_uniform MAX_UNIFORM]
+                [--test_uniform_gcd TEST_UNIFORM_GCD] [--mixture MIXTURE]
+                [--base BASE] [--tasks TASKS] [--beam_eval BEAM_EVAL]
+                [--beam_eval_train BEAM_EVAL_TRAIN] [--beam_size BEAM_SIZE]
+                [--beam_length_penalty BEAM_LENGTH_PENALTY]
+                [--beam_early_stopping BEAM_EARLY_STOPPING]
+                [--reload_model RELOAD_MODEL]
+                [--reload_checkpoint RELOAD_CHECKPOINT]
+                [--eval_only EVAL_ONLY] [--eval_from_exp EVAL_FROM_EXP]
+                [--eval_data EVAL_DATA] [--eval_verbose EVAL_VERBOSE]
+                [--eval_verbose_print EVAL_VERBOSE_PRINT]
+                [--debug_slurm DEBUG_SLURM] [--debug] [--cpu CPU]
+                [--local_rank LOCAL_RANK] [--master_port MASTER_PORT]
+                [--windows WINDOWS]
+train.py: error: unrecognized arguments: --max_int 1000000
+==============================================================================
+Running epilogue script on indigo54.
+
+Submit time  : 2025-03-07T18:16:51
+Start time   : 2025-03-08T01:18:48
+End time     : 2025-03-08T01:19:32
+Elapsed time : 00:00:44 (Timelimit=1-00:00:00)
+
+Job ID: 7150236
+Cluster: i5
+User/Group: as1g21/fp
+State: FAILED (exit code 2)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 00:00:11
+CPU Efficiency: 0.78% of 00:23:28 core-walltime
+Job Wall-clock time: 00:00:44
+Memory Utilized: 292.45 MB
+Memory Efficiency: 0.00% of 16.00 B
+

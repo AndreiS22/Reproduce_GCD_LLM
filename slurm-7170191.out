@@ -1,0 +1,56 @@
+Running SLURM prolog script on indigo52.cluster.local
+===============================================================================
+Job started on Tue Mar 11 12:18:27 GMT 2025
+Job ID          : 7170191
+Job name        : GCD_train.sh
+WorkDir         : /mainfs/home/as1g21/GCD
+Command         : /mainfs/home/as1g21/GCD/GCD_train.sh
+Partition       : gpu
+Num hosts       : 1
+Num cores       : 32
+Num of tasks    : 1
+Hosts allocated : indigo52
+Job Output Follows ...
+===============================================================================
+SLURM job: True
+0 - SLURM_JOB_ID: 7170191
+0 - SLURM_JOB_NODELIST: indigo52
+0 - SLURM_JOB_NUM_NODES: 1
+0 - SLURM_NTASKS: None
+0 - SLURM_TASKS_PER_NODE: 1
+0 - SLURM_MEM_PER_NODE: 32768
+0 - SLURM_MEM_PER_CPU: None
+0 - SLURM_NODEID: 0
+0 - SLURM_PROCID: 0
+0 - SLURM_LOCALID: 0
+0 - SLURM_TASK_PID: 123524
+Traceback (most recent call last):
+  File "/mainfs/home/as1g21/GCD/train.py", line 292, in <module>
+    main(params)
+  File "/mainfs/home/as1g21/GCD/train.py", line 196, in main
+    init_distributed_mode(params)
+  File "/mainfs/home/as1g21/GCD/src/slurm.py", line 88, in init_distributed_mode
+    params.world_size = int(os.environ['SLURM_NTASKS'])
+                            ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 679, in __getitem__
+KeyError: 'SLURM_NTASKS'
+==============================================================================
+Running epilogue script on indigo52.
+
+Submit time  : 2025-03-11T12:18:25
+Start time   : 2025-03-11T12:18:27
+End time     : 2025-03-11T12:18:59
+Elapsed time : 00:00:32 (Timelimit=1-00:00:00)
+
+Job ID: 7170191
+Cluster: i5
+User/Group: as1g21/fp
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 00:00:10
+CPU Efficiency: 0.98% of 00:17:04 core-walltime
+Job Wall-clock time: 00:00:32
+Memory Utilized: 328.98 MB
+Memory Efficiency: 0.00% of 16.00 B
+

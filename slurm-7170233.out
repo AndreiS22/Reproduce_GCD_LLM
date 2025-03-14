@@ -1,0 +1,170 @@
+Running SLURM prolog script on indigo53.cluster.local
+===============================================================================
+Job started on Tue Mar 11 12:33:34 GMT 2025
+Job ID          : 7170233
+Job name        : GCD_train.sh
+WorkDir         : /mainfs/home/as1g21/GCD
+Command         : /mainfs/home/as1g21/GCD/GCD_train.sh
+Partition       : gpu
+Num hosts       : 1
+Num cores       : 32
+Num of tasks    : 1
+Hosts allocated : indigo53
+Job Output Follows ...
+===============================================================================
+INFO - 03/11/25 12:33:40 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/11/25 12:33:40 - 0:00:00 - GRU: False
+                                     accumulate_gradients: 1
+                                     amp: -1
+                                     attention_dropout: 0
+                                     base: 10
+                                     batch_load: False
+                                     batch_size: 32
+                                     batch_size_eval: 128
+                                     beam_early_stopping: True
+                                     beam_eval: False
+                                     beam_eval_train: 0
+                                     beam_length_penalty: 1
+                                     beam_size: 1
+                                     benford: False
+                                     clip_grad_norm: 5
+                                     command: python train.py --dump_path '/home/as1g21/GCD/results' --exp_name DEMO --base 10 --maxint 1000000 --env_base_seed 42 --exp_id "7170233"
+                                     cpu: False
+                                     debug: False
+                                     debug_slurm: False
+                                     dec_emb_dim: 256
+                                     dropout: 0
+                                     dump_path: /home/as1g21/GCD/results/DEMO/7170233
+                                     enc_emb_dim: 256
+                                     env_base_seed: 42
+                                     env_name: arithmetic
+                                     epoch_size: 300000
+                                     eval_data: 
+                                     eval_from_exp: 
+                                     eval_only: False
+                                     eval_size: 10000
+                                     eval_verbose: 0
+                                     eval_verbose_print: False
+                                     exp_id: 7170233
+                                     exp_name: DEMO
+                                     export_data: False
+                                     fp16: False
+                                     gelu_activation: False
+                                     global_rank: 0
+                                     is_master: True
+                                     is_slurm_job: True
+                                     local_rank: 0
+                                     lstm: False
+                                     lstm_hidden_dim: 2048
+                                     master_addr: indigo53
+                                     master_port: -1
+                                     max_epoch: 100000
+                                     max_inverse: 100
+                                     max_len: 512
+                                     max_output_len: 512
+                                     max_uniform: 100
+                                     maxint: 1000000
+                                     mixture: -1.0
+                                     multi_gpu: False
+                                     multi_node: False
+                                     n_dec_heads: 8
+                                     n_dec_hidden_layers: 1
+                                     n_dec_layers: 4
+                                     n_enc_heads: 8
+                                     n_enc_hidden_layers: 1
+                                     n_enc_layers: 4
+                                     n_gpu_per_node: 1
+                                     n_nodes: 1
+                                     node_id: 0
+                                     norm_attention: False
+                                     num_workers: 10
+                                     optimizer: adam,lr=0.0001
+                                     reload_checkpoint: 
+                                     reload_data: 
+                                     reload_model: 
+                                     reload_size: -1
+                                     save_periodic: 0
+                                     share_inout_emb: True
+                                     sinusoidal_embeddings: False
+                                     stopping_criterion: 
+                                     tasks: arithmetic
+                                     test_uniform_gcd: True
+                                     train_32_dist: False
+                                     train_inverse_dist: False
+                                     train_sqrt_dist: False
+                                     train_uniform_gcd: False
+                                     validation_metrics: 
+                                     windows: False
+                                     world_size: 1
+                                     xav_init: False
+INFO - 03/11/25 12:33:40 - 0:00:00 - The experiment will be stored in /home/as1g21/GCD/results/DEMO/7170233
+                                     
+INFO - 03/11/25 12:33:40 - 0:00:00 - Running command: python train.py --dump_path '/home/as1g21/GCD/results' --exp_name DEMO --base 10 --maxint 1000000 --env_base_seed 42
+
+WARNING - 03/11/25 12:33:40 - 0:00:00 - Signal handler installed.
+INFO - 03/11/25 12:33:40 - 0:00:00 - words: {'<eos>': 0, '<pad>': 1, '<sep>': 2, '(': 3, ')': 4, '<SPECIAL_0>': 5, '<SPECIAL_1>': 6, '<SPECIAL_2>': 7, '<SPECIAL_3>': 8, '<SPECIAL_4>': 9, '<SPECIAL_5>': 10, '<SPECIAL_6>': 11, '<SPECIAL_7>': 12, '<SPECIAL_8>': 13, '<SPECIAL_9>': 14, '+': 15, '-': 16, '0': 17, '1': 18, '2': 19, '3': 20, '4': 21, '5': 22, '6': 23, '7': 24, '8': 25, '9': 26, 'V1': 27, 'V2': 28}
+INFO - 03/11/25 12:33:40 - 0:00:00 - Training tasks: arithmetic
+INFO - 03/11/25 12:33:40 - 0:00:00 - Number of parameters (encoder): 4215552
+INFO - 03/11/25 12:33:40 - 0:00:00 - Number of parameters (decoder): 5270301
+INFO - 03/11/25 12:33:40 - 0:00:00 - Found 177 parameters in model.
+SLURM job: True
+0 - SLURM_JOB_ID: 7170233
+0 - SLURM_JOB_NODELIST: indigo53
+0 - SLURM_JOB_NUM_NODES: 1
+0 - SLURM_NTASKS: 1
+0 - SLURM_TASKS_PER_NODE: 1
+0 - SLURM_MEM_PER_NODE: 32768
+0 - SLURM_MEM_PER_CPU: None
+0 - SLURM_NODEID: 0
+0 - SLURM_PROCID: 0
+0 - SLURM_LOCALID: 0
+0 - SLURM_TASK_PID: 7729
+0 - Master address: indigo53
+0 - Master port   : -1
+0 - Number of nodes: 1
+0 - Node ID        : 0
+0 - Local rank     : 0
+0 - Global rank    : 0
+0 - World size     : 1
+0 - GPUs per node  : 1
+0 - Master         : True
+0 - Multi-node     : False
+0 - Multi-GPU      : False
+0 - Hostname       : indigo53.cluster.local
+Traceback (most recent call last):
+  File "/mainfs/home/as1g21/GCD/train.py", line 292, in <module>
+    main(params)
+  File "/mainfs/home/as1g21/GCD/train.py", line 212, in main
+    trainer = Trainer(modules, env, params)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mainfs/home/as1g21/GCD/src/trainer.py", line 62, in __init__
+    self.set_optimizer()
+  File "/mainfs/home/as1g21/GCD/src/trainer.py", line 172, in set_optimizer
+    self.optimizer = get_optimizer(
+                     ^^^^^^^^^^^^^^
+  File "/mainfs/home/as1g21/GCD/src/optim.py", line 336, in get_optimizer
+    expected_args = inspect.getargs(optim_fn.__init__)[0]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/as1g21/.conda/envs/GCD-env/lib/python3.11/inspect.py", line 1309, in getargs
+    raise TypeError('{!r} is not a code object'.format(co))
+TypeError: <function Adam.__init__ at 0x2b1272237c40> is not a code object
+==============================================================================
+Running epilogue script on indigo53.
+
+Submit time  : 2025-03-11T12:33:33
+Start time   : 2025-03-11T12:33:34
+End time     : 2025-03-11T12:33:41
+Elapsed time : 00:00:07 (Timelimit=1-00:00:00)
+
+Job ID: 7170233
+Cluster: i5
+User/Group: as1g21/fp
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 32
+CPU Utilized: 00:00:11
+CPU Efficiency: 4.91% of 00:03:44 core-walltime
+Job Wall-clock time: 00:00:07
+Memory Utilized: 2.55 MB
+Memory Efficiency: 0.00% of 16.00 B
+
