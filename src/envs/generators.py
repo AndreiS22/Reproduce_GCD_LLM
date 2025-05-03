@@ -32,11 +32,10 @@ class Sequence(Generator):
         self.maxint = params.maxint
         self.dims = dims
         self.benford = params.benford
-        self.train_uniform_gcd = params.train_uniform_gcd
+        self.train_uniform_lcm = params.train_uniform_lcm
         
        
-        self.train_uniform_gcd = params.train_uniform_gcd
-        self.test_uniform_gcd = params.test_uniform_gcd
+        self.test_uniform_lcm = params.test_uniform_lcm
         self.max_uniform = params.max_uniform
         self.max_inverse = params.max_inverse
 
@@ -51,7 +50,7 @@ class Sequence(Generator):
         if self.train_sqrt_dist:
             for i in range(self.max_inverse):
                 self.inverse_dist[i] = 1 / math.sqrt(i + 1)
-                total += 1 / math.sqrt(i + 1)
+                sum += 1 / math.sqrt(i + 1)
         elif self.train_32_dist:
             for i in range(self.max_inverse):
                 self.inverse_dist[i] = 1 / (i + 1) * math.sqrt(i + 1)
@@ -59,7 +58,7 @@ class Sequence(Generator):
         else:
             for i in range(self.max_inverse):
                 self.inverse_dist[i] = 1 / (i + 1)
-                total += 1 / (i + 1)
+                sum += 1 / (i + 1)
         self.inverse_dist = self.inverse_dist / sum
 
     def integer_sequence(self, len, rng, type=None, max=None):
