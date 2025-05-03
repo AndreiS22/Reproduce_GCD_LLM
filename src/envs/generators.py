@@ -47,7 +47,7 @@ class Sequence(Generator):
 
         
         self.inverse_dist = np.zeros(self.max_inverse)
-        sum = 0.0
+        total = 0.0
         if self.train_sqrt_dist:
             for i in range(self.max_inverse):
                 self.inverse_dist[i] = 1 / math.sqrt(i + 1)
@@ -55,12 +55,12 @@ class Sequence(Generator):
         elif self.train_32_dist:
             for i in range(self.max_inverse):
                 self.inverse_dist[i] = 1 / (i + 1) * math.sqrt(i + 1)
-                sum += 1 / (i + 1) * math.sqrt(i + 1)
+                total += 1 / (i + 1) * math.sqrt(i + 1)
         else:
             for i in range(self.max_inverse):
                 self.inverse_dist[i] = 1 / (i + 1)
                 total += 1 / (i + 1)
-        self.inverse_dist = self.inverse_dist / sum
+        self.inverse_dist = self.inverse_dist / total
 
     def integer_sequence(self, len, rng, type=None, max=None):
         upper = self.maxint if max is None else max
