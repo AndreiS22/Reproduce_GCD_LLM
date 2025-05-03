@@ -86,7 +86,7 @@ class Sequence(Generator):
             out = L
 
         # Uniform-LCM distribution case
-        elif (type == "train" and (self.train_uniform_lcm or mix < self.mixture)) or type == "test":
+        elif (type == "train" and (self.train_uniform_gcd or mix < self.mixture)) or type == "test":
             L = rng.randint(1, self.max_uniform + 1)
             divisors = [d for d in range(1, L + 1) if L % d == 0]
             while True:
