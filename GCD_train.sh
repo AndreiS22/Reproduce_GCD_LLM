@@ -10,6 +10,6 @@
 #SBATCH --time=48:0:00
 
 module load conda/py3-latest
-conda activate GCD-env
+conda activate GCD-py37
 
 python train.py --dump_path /ECShome/xw3g19/Reproduce_GCD_LLM/GCD/results --exp_name LCM --n_enc_layers 2 --n_dec_layers 2 --batch_size 512 --base 10 --maxint 1000000 --env_base_seed 42

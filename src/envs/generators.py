@@ -83,6 +83,7 @@ class Sequence(Generator):
                     inp = [d1, d2]
                     break
             out = L
+            
 
         # Uniform-LCM distribution case
         elif (type == "train" and (self.train_uniform_lcm or mix < self.mixture)) or type == "test":

@@ -82,7 +82,7 @@ class Evaluator(object):
             scores["total"] = self.trainer.total_samples
             return scores
         
-        if params.test_uniform_gcd:
+        if params.test_uniform_lcm:
             data_type_list = ["valid", "test"]
         else:
             data_type_list = ["valid"]

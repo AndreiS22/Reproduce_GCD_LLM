@@ -189,7 +189,7 @@ class ArithmeticEnvironment(object):
             "--benford", type=bool_flag, default=False, help="Logarithmic distribution of integers"
         )
         parser.add_argument(
-            "--train_uniform_gcd", type=bool_flag, default=False, help="Uniformly distributed gcd in train set, 1 to max uniform"
+            "--train_uniform_lcm", type=bool_flag, default=False, help="Uniformly distributed gcd in train set, 1 to max uniform"
         )
         parser.add_argument(
             "--train_inverse_dist", type=bool_flag, default=False, help="gcd distributed as 1/K (instead of inverse squares) in train set, 1 to max_uniform"
@@ -208,7 +208,7 @@ class ArithmeticEnvironment(object):
             "--max_uniform", type=int, default=100, help="Maximum value of uniformly distributed gcd"
         )
         parser.add_argument(
-            "--test_uniform_gcd", type=bool_flag, default=True, help="Uniformly distributed gcd in test set, 1 to max uniform"
+            "--test_uniform_lcm", type=bool_flag, default=True, help="Uniformly distributed gcd in test set, 1 to max uniform"
         )
 
         parser.add_argument(
